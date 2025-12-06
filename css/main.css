@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #24612a;
+  background: #756c9c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1962,6 +1962,14 @@ pre .javascript .function {
 #qr p {
   text-align: center;
 }
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body p a:hover {
+  color: #0477ab;
+  text-decoration: underline;
+}
 .category-all-page .category-all-title {
   text-align: center;
 }
@@ -2140,6 +2148,13 @@ ul.breadcrumb li + li:last-child {
 }
 .tag-cloud a:hover {
   color: var(--link-hover-color) !important;
+}
+mjx-container[jax="CHTML"][display="true"],
+.has-jax {
+  overflow: auto hidden;
+}
+mjx-container + br {
+  display: none;
 }
 .header {
   margin: 0 auto;
@@ -2563,14 +2578,28 @@ ul.breadcrumb li + li:last-child {
     margin: 8px 0 0;
   }
 }
+/* Global background image */
 body {
   background: url("/images/background.png") no-repeat center center fixed;
   background-size: cover;
 }
+/* Main content containers with semi-transparent background */
 .post-block,
 .page {
   background: rgba(255,255,255,0.82);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
   -webkit-backdrop-filter: blur(6px);
+}
+/* Post cards on home page: card-style shadow */
+.posts-expand .post-block {
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+/* Hover effect: deeper shadow + slight lift */
+.posts-expand .post-block:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  transform: translateY(-4px);
 }
